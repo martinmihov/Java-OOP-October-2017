@@ -1,0 +1,75 @@
+#package interfaces
+#	interface Hero
+#		String getName();
+#		long getStrength();
+#		long getAgility();
+#		long getIntelligence();
+#		long getHitPoints();
+#		long getDamage();
+#		Collection<Item> getItems();
+#		void addItem(Item item);
+#		void addRecipe(Recipe recipe);
+#	interface Inventory
+#		long getTotalStrengthBonus();
+#		long getTotalAgilityBonus();
+#		long getTotalIntelligenceBonus();
+#		long getTotalHitPointsBonus();
+#		long getTotalDamageBonus();
+#		void addCommonItem(Item item);
+#		void addRecipeItem(Recipe recipe);
+#	interface Item
+#		String getName();
+#		int getStrengthBonus();
+#		int getAgilityBonus();
+#		int getIntelligenceBonus();
+#		int getHitPointsBonus();
+#		int getDamageBonus();
+#	interface InputReader
+#		String readLine();
+#	interface OutputWriter
+#		void writeLine(String output);
+#		void writeLine(String format, Object... params);
+#	interface Recipe extends Item
+#		List<String> getRequiredItems();
+#	interface Executable
+#		String execute();
+#	interface HeroController
+#		String createHero();
+#		String createCommonItem();
+#		String createRecipeItem();
+		
+#package entities
+#	package heroеs
+#		abstract class implements Hero
+#			class Barbarian
+#			class Assassin
+#			class Wizard
+#	package items
+#		abstract class BaseItem implements Item
+#			class CommonItem 
+#			class RecipeItem
+#	package inventories
+#		class HeroInventory implements Inventory
+
+#package io
+#	class ConsoleReader implements InputReader
+#	class ConsoleWriter implements OutputWriter
+	
+#package annotations
+#	annotation ItemCollection for Collection of items
+
+#package factories
+#	class HeroFactory
+#	class ItemFactory
+	
+#package engines
+#	class Engine implements Runnable
+	
+#package core
+#	package commands
+#		class HeroCommand implements Executable
+#		class ItemCommand implements Executable
+#		class RecipeCommand implements Executable
+#		class InspectCommand implements Executable
+#	class CommandHadler
+#	class HeroControllerImpl implements HeroController
