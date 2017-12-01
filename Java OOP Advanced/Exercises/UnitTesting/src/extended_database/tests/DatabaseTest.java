@@ -33,7 +33,7 @@ public class DatabaseTest {
         List<Person> people = new ArrayList<>(17);
         Collections.fill(people, gogo);
 
-        database = new Database(people.stream().toArray(Person[]::new));
+        database = new Database(people.toArray(new Person[0]));
     }
 
     @Test(expected = OperationNotSupportedException.class)

@@ -90,7 +90,7 @@ public class BubbleTest {
     public void testSortOneElementShouldExists() {
         // Arrange
         int[] inputArray = {0};
-        String expected = String.format("[0]");
+        String expected = "[0]";
 
         // Act
         Bubble.sort(inputArray);
